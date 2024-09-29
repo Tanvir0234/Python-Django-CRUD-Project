@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Trainee</title>
+</head>
+<body>
+    <form action="save" method="post">
+        {% csrf_token %}
+        <div>
+            <div>
+                <label for=""></label>
+                <div>
+                    <h3>Enter Trainee Information</h3>
+                </div>
+            </div>
+            <div>
+                <label for="">Trainee Name</label>
+                <div>
+                    {{form.Name}}
+                </div>
+            </div>
+            <div>
+                <label for="">Contact No.</label>
+                <div>
+                    {{form.ContactNo}}
+                </div>
+            </div>
+            <div>
+                <label for="">Contact Address</label>
+                <div>
+                    {{form.ContactAddress}}
+                </div>
+            </div>
+            <div>
+                <label for="">Email Address</label>
+                <div>
+                    {{form.EmailAddress}}
+                </div>
+            </div>
+            <div>
+                <label for="">Batch No.</label>
+                <div>
+                    {{form.BatchNo}}
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="">Batch No.</label>
+                <div>
+                    <button type="submit">Save</button>
+                </div>
+            </div>
+        </div>
+       
+    </form>
+</body>
+</html>
