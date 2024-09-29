@@ -39,10 +39,8 @@ def updateTrainee(request,id):
       trainee = Trainee.objects.get(TraineeId = id)           
       form = TraineeForm(request.POST , instance = trainee)
       if form.is_valid():
-       
             form.save()
             return redirect("/")
-     
       return render(request,"edit.html",{'trainee':trainee})
     
 

@@ -8,58 +8,68 @@
     <title>Save Trainee</title>
 </head>
 <body>
-    <div class="container">
-        <form action="save" method="post">
-            {% csrf_token %}
-            <div>
-                <div>
-                    <label for=""></label>
+    <div class="row  bg-info ">
+        <div class=" container col-md-6 col-md-offset-3">
+            <div class="m-5 p-5 bg-secondary bg-gradient rounded">
+                <form method="POST" action ="save" >
+                    {% csrf_token %}
                     <div>
-                        <h3>Enter Trainee Information</h3>
-                    </div>
-                </div>
-                <div>
-                    <label for="">Trainee Name</label>
-                    <div>
+                        <div class="bg-success rounded">
+                            <lable></lable>
+                            <div>
+                                <h3 class="text-white p-3">Enter Trainee Information</h3>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <lable class="text-white">Trainee Name </lable>
+                            <div>
+                                {{form.Name}}
+                            </div>
+                        </div>
+                        <div>
+                            <lable class="text-white">ContactNo</lable>
+                            <div>
+                                {{form.ContactNo}}
+                            </div>
+                        </div>
+                        <div>
+                            <lable class="text-white">ContactAddress</lable>
+                            <div>
+                                {{form.ContactAddress}}
+                            </div>
+                        </div>
+                        <div>
+                            <lable class="text-white">EmailAddress</lable>
+                            <div>
+                                {{form.EmailAddress}}
+                            </div>
+                        </div>
+                        <div>
+                            <lable class="text-white"> BatchNo</lable>
+                            <div>
+                                {{form.BatchNo}}
+                            </div>
+                        </div>
+                        <div >
+                            <lable></lable>
+                            <div>
+                                <button class="btn btn-success mt-3 btn-lg"  type="submit">Save</button>
+                            </div>
+                        </div>
                        
-                        {{form.Name}}
+                       
                     </div>
-                </div>
-                <div>
-                    <label for="">Contact No.</label>
-                    <div>
-                        {{form.ContactNo}}
-                    </div>
-                </div>
-                <div>
-                    <label for="">Contact Address</label>
-                    <div>
-                        {{form.ContactAddress}}
-                    </div>
-                </div>
-                <div>
-                    <label for="">Email Address</label>
-                    <div>
-                        {{form.EmailAddress}}
-                    </div>
-                </div>
-                <div>
-                    <label for="">Batch No.</label>
-                    <div>
-                        {{form.BatchNo}}
-                    </div>
-                </div>
-                <br>
-                <div>
-                   <div>
-                        <button class="btn btn-success" type="submit">Save</button>
-                    </div>
-                </div>
+                </form>
+
             </div>
-           
-        </form>
+            
+
+        </div>
 
     </div>
+    
+   
     
 </body>
 </html>
