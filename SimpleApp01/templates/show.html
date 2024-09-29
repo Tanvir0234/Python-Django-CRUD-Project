@@ -13,16 +13,16 @@
    
         
         <div class="m-5">
-            <div class="bg-info p-2">
-                <h3 class="text-center">Trainee Information</h3>
+            <div class="bg-success p-2">
+                <h3 class="text-center text-white">Trainee Information</h3>
         
             </div>
             
            <div >
             <table class="table table-striped table-hover table-bordered">
-                <thead class="thead-dark">
+                <thead>
                     <tr>
-                        <th>Trainee ID</th>
+                      <!--  <th>Trainee ID</th>---->
                         <th>Name</td>
                         <th>Contact Number</th>
                         <th>Contact Address</th>
@@ -30,26 +30,27 @@
                         <th>Batch Number</th>
                         <th>Actions</th>
                     </tr>
-                    <tbody>
+                </thead>
+                <tbody>
                           {%for trn in trainees%}
         
                           <tr>
-                            <td>{{trn.TraineeID}}</td>
+                           
                             <td>{{trn.Name}}</td>
                             <td>{{trn.ContactNo}}</td>
                             <td>{{trn.ContactAddress}}</td>
                             <td>{{trn.EmailAddress}}</td>
                             <td>{{trn.BatchNo}}</td>
                             <td>
-                              <!----  <a href="/">Edit</a>
-                                <a href="/delete/{{trn.TraineeID}}">Delete</a>-->
+                              <a href="/edit/{{trn.TraineeId}}">Edit</a>
+                              <a href="/delete/{{trn.TraineeId}}" class="btn btn-danger">Delete</a>
                             </td>
         
                           </tr>
         
                           {% endfor %}
-                    </tbody>
-                </thead>
+                </tbody>
+                
             </table>
 
             <center><a href="/save" class="btn btn-primary mt-4">Add New Trainee</a></center>

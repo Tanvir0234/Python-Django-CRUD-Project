@@ -32,19 +32,18 @@ def deleteTrainee(request,id):
 
 def editTrainee(request,id):
     trainee = Trainee.objects.get(TraineeId = id) 
-    return render(request,'edit.html',{'trainee':trainee})
+    return render(request,"edit.html",{'trainee':trainee})
     
        
 def updateTrainee(request,id):
       trainee = Trainee.objects.get(TraineeId = id)           
-      form = TraineeForm(request.POST , instance=trainee)
+      form = TraineeForm(request.POST , instance = trainee)
       if form.is_valid():
-        try:
+       
             form.save()
             return redirect("/")
-        except:
-            pass 
-      else:
-        pass
+     
+      return render(request,"edit.html",{'trainee':trainee})
+    
 
         
