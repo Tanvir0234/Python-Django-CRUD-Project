@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from SimpleApp01 import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.showTrainee),
@@ -25,4 +26,6 @@ urlpatterns = [
     path('edit/<int:id>',views.editTrainee),
     path('delete/<int:id>',views.deleteTrainee),
     path('update/<int:id>',views.updateTrainee),
+    path('export/pdf/', views.export_to_pdf, name='export_to_pdf'),
+    path('export/excel/', views.export_to_excel, name='export_to_excel'),
 ]
